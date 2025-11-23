@@ -11,12 +11,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-/* index.css */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 :root {
   --poison-green: #00ff88;
   
