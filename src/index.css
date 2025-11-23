@@ -2,26 +2,22 @@
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: white;
-  
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-<<<<<<< HEAD
 
-=======
->>>>>>> 371ef800b85541c0727351e84ad00dc3c98b6d50
-:root {
+  /* Custom variables */
   --poison-green: #00ff88;
-  
 }
+
+/* Body styles */
 body {
-  background: var(--poison-dark);
+  background: var(--poison-dark, #000); /* fallback if --poison-dark not defined */
   color: white;
   font-family: "Poppins", sans-serif;
 }
