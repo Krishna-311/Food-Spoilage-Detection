@@ -46,6 +46,21 @@ export const GasChart = () => {
           border: 1px solid #2a7f2a !important;
           color: #2a7f2a !important;
         }
+
+        /* Mobile Responsive Styles */
+        @media (max-width: 480px) {
+          .gas-card {
+            padding: 10px;
+          }
+
+          .gas-title {
+            font-size: 16px;
+          }
+
+          .recharts-cartesian-axis-tick-value {
+            font-size: 12px;
+          }
+        }
       `}</style>
 
       <div className="gas-card">
@@ -76,3 +91,4 @@ export const GasChart = () => {
     </>
   );
 };
+

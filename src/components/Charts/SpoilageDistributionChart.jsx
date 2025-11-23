@@ -39,6 +39,7 @@ export const SpoilageDistributionChart = () => {
           justify-content: center;
           gap: 20px;
           margin-top: 12px;
+          flex-wrap: wrap;
         }
 
         .legend-item {
@@ -53,6 +54,25 @@ export const SpoilageDistributionChart = () => {
           width: 18px;
           height: 18px;
           border-radius: 4px;
+        }
+
+        /* Mobile Responsive Styles */
+        @media (max-width: 480px) {
+          .spoilage-card {
+            padding: 10px;
+          }
+
+          .spoilage-title {
+            font-size: 16px;
+          }
+
+          .color-legend {
+            gap: 10px;
+          }
+
+          .legend-item {
+            font-size: 14px;
+          }
         }
       `}</style>
 

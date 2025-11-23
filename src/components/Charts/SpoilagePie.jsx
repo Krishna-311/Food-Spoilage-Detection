@@ -14,7 +14,6 @@ export const SpoilagePie = () => {
     { name: "Spoiled", value: 20 },
   ];
 
-  // Updated colors for light theme
   const COLORS = ["#4caf50", "#ffd24d", "#ff6666"];
 
   return (
@@ -40,6 +39,17 @@ export const SpoilagePie = () => {
           background-color: #f7fff7 !important;
           border: 1px solid #2a7f2a !important;
           color: #2a7f2a !important;
+        }
+
+        /* Mobile Responsive Styles */
+        @media (max-width: 480px) {
+          .spoilagePie-card {
+            padding: 10px;
+          }
+
+          .spoilagePie-title {
+            font-size: 16px;
+          }
         }
       `}</style>
 

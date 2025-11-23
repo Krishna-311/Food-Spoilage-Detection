@@ -20,6 +20,21 @@ export default function SensorCard({ title, value }) {
           font-size: 28px;
           font-weight: bold;
         }
+
+        /* Mobile Responsive Styles */
+        @media (max-width: 480px) {
+          .sensor-card {
+            padding: 12px;
+          }
+
+          .sensor-title {
+            font-size: 16px;
+          }
+
+          .sensor-value {
+            font-size: 22px;
+          }
+        }
       `}</style>
 
       <div className="sensor-card">

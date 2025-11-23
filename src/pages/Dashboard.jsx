@@ -19,6 +19,7 @@ export default function Dashboard() {
           font-family: Arial, sans-serif;
         }
 
+        /* Sensor Grid */
         .sensor-grid {
           display: grid;
           grid-template-columns: 1fr;
@@ -32,10 +33,12 @@ export default function Dashboard() {
           }
         }
 
+        /* Status Section */
         .status-section {
           margin-top: 24px;
         }
 
+        /* Charts Grid */
         .charts-grid {
           display: grid;
           grid-template-columns: 1fr;
@@ -43,12 +46,19 @@ export default function Dashboard() {
           margin-top: 24px;
         }
 
-        @media (min-width: 1024px) {
+        @media (min-width: 768px) {
           .charts-grid {
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: 1fr 1fr;
           }
         }
 
+        @media (min-width: 1024px) {
+          .charts-grid {
+            grid-template-columns: repeat(3, 1fr);
+          }
+        }
+
+        /* Forms Grid */
         .forms-grid {
           display: grid;
           grid-template-columns: 1fr;
@@ -62,8 +72,9 @@ export default function Dashboard() {
           }
         }
 
+        /* Accuracy Card */
         .accuracy-card {
-          margin-top: 40px;
+          margin-top: 32px;
           padding: 24px;
           background-color: #e0f7e0; /* light green card */
           border-radius: 12px;
@@ -80,6 +91,21 @@ export default function Dashboard() {
         .accuracy-card span {
           color: #2a7f2a;
           font-weight: bold;
+        }
+
+        /* Mobile adjustments */
+        @media (max-width: 480px) {
+          .dashboard-container {
+            padding: 16px;
+          }
+
+          .charts-grid, .forms-grid {
+            gap: 16px;
+          }
+
+          .accuracy-card {
+            padding: 16px;
+          }
         }
       `}</style>
 

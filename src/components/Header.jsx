@@ -20,6 +20,17 @@ export default function Header() {
           color: #2a7f2a; /* dark green title */
           text-align: center;
         }
+
+        /* Mobile Responsive Styles */
+        @media (max-width: 480px) {
+          .header-bar {
+            padding: 14px 0;
+          }
+
+          .header-title {
+            font-size: 20px;
+          }
+        }
       `}</style>
 
       <header className="header-bar">

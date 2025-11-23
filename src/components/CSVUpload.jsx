@@ -40,6 +40,27 @@ export default function CSVUpload() {
         .csv-btn:hover {
           opacity: 0.9;
         }
+
+        /* Mobile Responsive Styles */
+        @media (max-width: 480px) {
+          .csv-card {
+            padding: 16px;
+          }
+
+          .csv-title {
+            font-size: 18px;
+            margin-bottom: 10px;
+          }
+
+          .csv-input {
+            padding: 10px;
+          }
+
+          .csv-btn {
+            padding: 10px;
+            font-size: 14px;
+          }
+        }
       `}</style>
 
       <div className="csv-card">

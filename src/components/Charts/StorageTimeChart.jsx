@@ -44,6 +44,25 @@ export const StorageTimeChart = () => {
           border: 1px solid #2a7f2a !important;
           color: #2a7f2a !important;
         }
+
+        /* Mobile Responsive Styles */
+        @media (max-width: 480px) {
+          .storage-card {
+            padding: 10px;
+          }
+
+          .storage-title {
+            font-size: 16px;
+          }
+
+          .recharts-cartesian-axis-tick-value {
+            font-size: 12px;
+          }
+
+          .recharts-label {
+            font-size: 12px;
+          }
+        }
       `}</style>
 
       <div className="storage-card">

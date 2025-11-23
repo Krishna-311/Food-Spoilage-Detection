@@ -48,6 +48,27 @@ export default function ManualInputForm() {
         .manual-btn:hover {
           opacity: 0.9;
         }
+
+        /* Mobile Responsive Styles */
+        @media (max-width: 480px) {
+          .manual-card {
+            padding: 16px;
+          }
+
+          .manual-title {
+            font-size: 18px;
+            margin-bottom: 10px;
+          }
+
+          .manual-input {
+            padding: 10px;
+          }
+
+          .manual-btn {
+            padding: 10px;
+            font-size: 14px;
+          }
+        }
       `}</style>
 
       <div className="manual-card">
@@ -60,7 +81,9 @@ export default function ManualInputForm() {
               className="manual-input"
               placeholder={field.toUpperCase()}
               value={input[field]}
-              onChange={(e) => setInput({ ...input, [field]: e.target.value })}
+              onChange={(e) =>
+                setInput({ ...input, [field]: e.target.value })
+              }
             />
           ))}
 

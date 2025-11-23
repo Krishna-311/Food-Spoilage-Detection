@@ -21,6 +21,17 @@ export default function StatusBadge({ status }) {
           font-size: 28px;
           font-weight: bold;
         }
+
+        /* Mobile Responsive Styles */
+        @media (max-width: 480px) {
+          .status-badge {
+            padding: 12px;
+          }
+
+          .status-text {
+            font-size: 22px;
+          }
+        }
       `}</style>
 
       <div className="status-badge">
