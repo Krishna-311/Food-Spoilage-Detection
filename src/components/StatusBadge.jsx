@@ -1,10 +1,10 @@
 export default function StatusBadge({ status }) {
   const color =
     status === "Fresh"
-      ? "#00ff88"       // green
+      ? "#4caf50"       // green
       : status === "Slightly Spoiled"
       ? "#ffd24d"       // yellow
-      : "#ff4d4d";      // red
+      : "#ff6666";      // red
 
   return (
     <>
@@ -12,8 +12,9 @@ export default function StatusBadge({ status }) {
         .status-badge {
           padding: 16px;
           text-align: center;
-          background: var(--poison-card);
+          background: #e0f7e0; /* light green card */
           border-radius: 12px;
+          box-shadow: 0px 0px 10px rgba(42,127,42,0.2);
         }
 
         .status-text {

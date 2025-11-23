@@ -4,46 +4,118 @@ import StatusBadge from "../components/StatusBadge";
 import ManualInputForm from "../components/ManualInputForm";
 import CSVUpload from "../components/CSVUpload";
 import SpoilagePie from "../components/Charts/TimeSpoilageChart";
-import TimeSpoilageChart from "../components/Charts/TimeSpoilageChart";
-import TempHumidityChart from "../../components/Charts/TempHumidityChart";
+import TempHumidityChart from "../components/Charts/TempHumidityChart";
 import { GasChart } from "../components/Charts/GasChart";
+
 export default function Dashboard() {
   return (
-    <div className="p-6">
+    <div className="dashboard-container">
+
+      <style>{`
+        .dashboard-container {
+          padding: 24px;
+          background-color: #f7fff7; /* light green background */
+          color: #333;
+          font-family: Arial, sans-serif;
+        }
+
+        .sensor-grid {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 16px;
+          margin-top: 24px;
+        }
+
+        @media (min-width: 768px) {
+          .sensor-grid {
+            grid-template-columns: repeat(3, 1fr);
+          }
+        }
+
+        .status-section {
+          margin-top: 24px;
+        }
+
+        .charts-grid {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 24px;
+          margin-top: 24px;
+        }
+
+        @media (min-width: 1024px) {
+          .charts-grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+
+        .forms-grid {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 24px;
+          margin-top: 40px;
+        }
+
+        @media (min-width: 1024px) {
+          .forms-grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+
+        .accuracy-card {
+          margin-top: 40px;
+          padding: 24px;
+          background-color: #e0f7e0; /* light green card */
+          border-radius: 12px;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .accuracy-card h2 {
+          font-size: 1.25rem;
+          font-weight: 600;
+          margin-bottom: 8px;
+          color: #2a7f2a; /* dark green heading */
+        }
+
+        .accuracy-card span {
+          color: #2a7f2a;
+          font-weight: bold;
+        }
+      `}</style>
 
       <Header />
 
       {/* Sensor Values */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+      <div className="sensor-grid">
         <SensorCard title="Temperature" value="22°C" />
         <SensorCard title="Humidity" value="61%" />
         <SensorCard title="Gas Level" value="340 ppm" />
       </div>
 
       {/* Spoilage status */}
-      <div className="mt-6">
+      <div className="status-section">
         <StatusBadge status="Fresh" />
       </div>
 
       {/* Charts */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
+      <div className="charts-grid">
         <SpoilagePie />
         <TempHumidityChart />
         <GasChart />
-        
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-10">
+      {/* Forms */}
+      <div className="forms-grid">
         <ManualInputForm />
         <CSVUpload />
       </div>
 
-      <div className="mt-10 p-6 bg-[var(--poison-card)] rounded-xl shadow-lg">
-        <h2 className="text-xl font-semibold mb-2 text-[var(--poison-green)]">
-          Model Accuracy & Comparisons
-        </h2>
-        <p>Accuracy: <span className="text-[var(--poison-green)] font-bold">94.2%</span></p>
-        <p>Best Model: Random Forest</p>
+      {/* Accuracy card */}
+      <div className="accuracy-card">
+        <h2>Model Accuracy & Comparisons</h2>
+        <p>
+          Accuracy: <span>94.2%</span>
+        </p>
       </div>
 
     </div>

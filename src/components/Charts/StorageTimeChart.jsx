@@ -22,27 +22,27 @@ export const StorageTimeChart = () => {
 
   return (
     <>
-      {/* -------- CSS inside same JSX file -------- */}
+      {/* -------- CSS inside same JSX file (Light Green-White Theme) -------- */}
       <style>{`
         .storage-card {
           padding: 15px;
-          background-color: #141716;
+          background-color: #e0f7e0; /* light green card */
           border-radius: 10px;
-          border: 1px solid #1f331e;
-          box-shadow: 0px 0px 8px rgba(0,255,0,0.15);
+          border: 1px solid #c1e6c1;
+          box-shadow: 0px 0px 8px rgba(42, 127, 42, 0.2);
         }
 
         .storage-title {
-          color: #76ff68;
+          color: #2a7f2a; /* dark green heading */
           margin-bottom: 12px;
           font-size: 18px;
           text-align: center;
         }
 
         .tooltip-box {
-          background-color: #1c1f1d !important;
-          border: 1px solid #76ff68 !important;
-          color: white !important;
+          background-color: #f7fff7 !important; /* light tooltip background */
+          border: 1px solid #2a7f2a !important;
+          color: #2a7f2a !important;
         }
       `}</style>
 
@@ -51,23 +51,23 @@ export const StorageTimeChart = () => {
 
         <ResponsiveContainer width="100%" height={280}>
           <LineChart data={data}>
-            <CartesianGrid strokeDasharray="3 3" stroke="#2b3b2b" />
+            <CartesianGrid strokeDasharray="3 3" stroke="#cce6cc" />
 
             <XAxis
               dataKey="hours"
-              stroke="#9aff95"
+              stroke="#2a7f2a"
               label={{
                 value: "Hours",
                 position: "insideBottom",
-                fill: "#9aff95",
+                fill: "#2a7f2a",
               }}
             />
             <YAxis
-              stroke="#9aff95"
+              stroke="#2a7f2a"
               label={{
                 value: "Spoilage %",
                 angle: -90,
-                fill: "#9aff95",
+                fill: "#2a7f2a",
               }}
             />
 
@@ -76,9 +76,9 @@ export const StorageTimeChart = () => {
             <Line
               type="monotone"
               dataKey="spoilage"
-              stroke="#76ff68"
+              stroke="#2a7f2a"
               strokeWidth={3}
-              dot={{ r: 4, fill: "#76ff68" }}
+              dot={{ r: 4, fill: "#2a7f2a" }}
             />
           </LineChart>
         </ResponsiveContainer>

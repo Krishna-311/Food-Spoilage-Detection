@@ -6,7 +6,8 @@ const data = [
   { name: "Spoiled", value: 20 },
 ];
 
-const colors = ["#00ff88", "#cccc00", "#ff4444"];
+// Softer colors for light green-white theme
+const colors = ["#4caf50", "#ffd24d", "#ff6666"];
 
 export default function SpoilagePie() {
   return (
@@ -14,15 +15,16 @@ export default function SpoilagePie() {
       <style>{`
         .sp-card {
           padding: 24px;
-          background-color: var(--poison-card);
+          background-color: #e0f7e0; /* light green card */
           border-radius: 12px;
-          box-shadow: 0px 0px 10px rgba(0,255,0,0.15);
+          box-shadow: 0px 0px 10px rgba(42,127,42,0.2);
         }
 
         .sp-title {
           font-size: 18px;
           margin-bottom: 16px;
-          color: var(--poison-green);
+          color: #2a7f2a; /* dark green title */
+          text-align: center;
         }
       `}</style>
 
@@ -35,11 +37,10 @@ export default function SpoilagePie() {
             cx="50%"
             cy="50%"
             outerRadius={80}
-            fill="#8884d8"
             dataKey="value"
           >
             {data.map((entry, index) => (
-              <Cell key={index} fill={colors[index]} />
+              <Cell key={index} fill={colors[index]} stroke="#f7fff7" />
             ))}
           </Pie>
         </PieChart>

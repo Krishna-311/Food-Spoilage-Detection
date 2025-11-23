@@ -4,19 +4,19 @@ export default function SensorCard({ title, value }) {
       <style>{`
         .sensor-card {
           padding: 16px;
-          background: var(--poison-card);
+          background: #e0f7e0; /* light green card */
           border-radius: 12px;
           text-align: center;
-          box-shadow: 0px 0px 10px rgba(0,255,0,0.15);
+          box-shadow: 0px 0px 10px rgba(42,127,42,0.2);
         }
 
         .sensor-title {
           font-size: 18px;
-          color: #cccccc;
+          color: #2a7f2a; /* dark green title */
         }
 
         .sensor-value {
-          color: var(--poison-green);
+          color: #2a7f2a; /* dark green value */
           font-size: 28px;
           font-weight: bold;
         }

@@ -5,8 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
+  
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -20,8 +19,7 @@
 
 :root {
   --poison-green: #00ff88;
-  --poison-dark: #0a0f0a;
-  --poison-card: #111a11;
+  
 }
 body {
   background: var(--poison-dark);

@@ -8,15 +8,15 @@ export default function ManualInputForm() {
       <style>{`
         .manual-card {
           padding: 24px;
-          background: var(--poison-card);
+          background: #e0f7e0; /* light green card */
           border-radius: 12px;
-          box-shadow: 0px 0px 10px rgba(0,255,0,0.15);
+          box-shadow: 0px 0px 10px rgba(42,127,42,0.2);
         }
 
         .manual-title {
           font-size: 20px;
           font-weight: bold;
-          color: var(--poison-green);
+          color: #2a7f2a; /* dark green heading */
           margin-bottom: 12px;
         }
 
@@ -29,19 +29,24 @@ export default function ManualInputForm() {
         .manual-input {
           padding: 12px;
           border-radius: 8px;
-          background: black;
-          color: white;
-          border: 1px solid #555;
+          background: #f7fff7; /* light input background */
+          color: #333;
+          border: 1px solid #c1e6c1;
         }
 
         .manual-btn {
           padding: 12px;
           margin-top: 8px;
-          background: var(--poison-green);
-          color: black;
+          background: #2a7f2a; /* dark green button */
+          color: #f7fff7; /* white text */
           font-weight: bold;
           border-radius: 8px;
           cursor: pointer;
+          border: none;
+        }
+
+        .manual-btn:hover {
+          opacity: 0.9;
         }
       `}</style>
 

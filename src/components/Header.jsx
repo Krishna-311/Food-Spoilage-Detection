@@ -4,10 +4,10 @@ export default function Header() {
       <style>{`
         .header-bar {
           width: 100%;
-          background: linear-gradient(90deg, #001a00, #003300);
+          background: linear-gradient(90deg, #e0f7e0, #c1e6c1); /* light green gradient */
           padding: 20px 0;
           border-radius: 12px;
-          box-shadow: 0px 0px 15px rgba(0, 255, 0, 0.2);
+          box-shadow: 0px 0px 15px rgba(42, 127, 42, 0.2);
           display: flex;
           justify-content: center;
           align-items: center;
@@ -17,7 +17,7 @@ export default function Header() {
         .header-title {
           font-size: 28px;
           font-weight: bold;
-          color: var(--poison-green);
+          color: #2a7f2a; /* dark green title */
           text-align: center;
         }
       `}</style>

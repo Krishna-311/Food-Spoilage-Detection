@@ -14,25 +14,32 @@ export const SpoilagePie = () => {
     { name: "Spoiled", value: 20 },
   ];
 
-  const COLORS = ["#4aff4a", "#ffd24d", "#ff4d4d"];
+  // Updated colors for light theme
+  const COLORS = ["#4caf50", "#ffd24d", "#ff6666"];
 
   return (
     <>
-      {/* ----------- CSS Inside Same File ----------- */}
+      {/* ----------- CSS Inside Same File (Light Green-White Theme) ----------- */}
       <style>{`
         .spoilagePie-card {
-          background-color: #141716;
+          background-color: #e0f7e0; /* light green card */
           padding: 15px;
           border-radius: 10px;
-          border: 1px solid #1f331e;
-          box-shadow: 0px 0px 10px rgba(0,255,0,0.15);
+          border: 1px solid #c1e6c1;
+          box-shadow: 0px 0px 10px rgba(42,127,42,0.2);
         }
 
         .spoilagePie-title {
-          color: #76ff68;
+          color: #2a7f2a; /* dark green heading */
           text-align: center;
           margin-bottom: 10px;
           font-size: 18px;
+        }
+
+        .recharts-tooltip-wrapper {
+          background-color: #f7fff7 !important;
+          border: 1px solid #2a7f2a !important;
+          color: #2a7f2a !important;
         }
       `}</style>
 
@@ -48,15 +55,15 @@ export const SpoilagePie = () => {
               label
             >
               {data.map((entry, i) => (
-                <Cell key={i} fill={COLORS[i]} stroke="#0f0f0f" />
+                <Cell key={i} fill={COLORS[i]} stroke="#f7fff7" />
               ))}
             </Pie>
 
             <Tooltip
               contentStyle={{
-                backgroundColor: "#1c1f1d",
-                border: "1px solid #76ff68",
-                color: "white",
+                backgroundColor: "#f7fff7",
+                border: "1px solid #2a7f2a",
+                color: "#2a7f2a",
               }}
             />
           </PieChart>

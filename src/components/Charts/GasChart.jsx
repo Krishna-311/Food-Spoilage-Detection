@@ -20,21 +20,31 @@ export const GasChart = () => {
 
   return (
     <>
-      {/* ----- CSS inside same file ----- */}
+      {/* ----- CSS inside same file (Light green-white theme) ----- */}
       <style>{`
         .gas-card {
           padding: 15px;
-          background-color: #141716;
+          background-color: #e0f7e0; /* light green card */
           border-radius: 10px;
-          border: 1px solid #1f331e;
-          box-shadow: 0px 0px 8px rgba(0, 255, 0, 0.15);
+          border: 1px solid #c1e6c1;
+          box-shadow: 0px 0px 8px rgba(42, 127, 42, 0.2);
         }
 
         .gas-title {
-          color: #76ff68;
+          color: #2a7f2a; /* dark green heading */
           margin-bottom: 12px;
           font-size: 18px;
           text-align: center;
+        }
+
+        .recharts-cartesian-grid line {
+          stroke: #cce6cc; /* light green grid lines */
+        }
+
+        .recharts-tooltip-wrapper {
+          background-color: #f7fff7 !important; /* tooltip light background */
+          border: 1px solid #2a7f2a !important;
+          color: #2a7f2a !important;
         }
       `}</style>
 
@@ -43,22 +53,22 @@ export const GasChart = () => {
 
         <ResponsiveContainer width="100%" height={280}>
           <LineChart data={data}>
-            <CartesianGrid strokeDasharray="3 3" stroke="#2b3b2b" />
-            <XAxis dataKey="time" stroke="#9aff95" />
-            <YAxis stroke="#9aff95" />
+            <CartesianGrid strokeDasharray="3 3" stroke="#cce6cc" />
+            <XAxis dataKey="time" stroke="#2a7f2a" />
+            <YAxis stroke="#2a7f2a" />
             <Tooltip
               contentStyle={{
-                backgroundColor: "#1c1f1d",
-                border: "1px solid #76ff68",
-                color: "white",
+                backgroundColor: "#f7fff7",
+                border: "1px solid #2a7f2a",
+                color: "#2a7f2a",
               }}
             />
             <Line
               type="monotone"
               dataKey="gas"
-              stroke="#76ff68"
+              stroke="#2a7f2a"
               strokeWidth={3}
-              dot={{ r: 4, fill: "#76ff68" }}
+              dot={{ r: 4, fill: "#2a7f2a" }}
             />
           </LineChart>
         </ResponsiveContainer>
